@@ -1,7 +1,28 @@
 body {
     font-family: "Courier", monospace;
     background-color: rgb(46, 45, 49);
+    color: rgb(158, 155, 155);
 }
+
+.lightMode {
+    background-color: rgb(255, 253, 253);
+    color: rgb(0, 0, 0);
+}
+
+#browser {
+    font-size: 25px;
+}
+
+#ThemeButton {
+    background-color: black;
+    color: rgb(158, 155, 155);
+}
+
+.themeDiv {
+    position: relative;
+    left: 85%;
+}
+
 .info {
     letter-spacing: .1em;
     left: 50%;
@@ -10,9 +31,9 @@ body {
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 10px;
-    color: rgb(158, 155, 155);
     text-align: center;
 }
+
 h1 {
     font-size: 40px;
 }
@@ -33,7 +54,6 @@ p {
     padding-left: 20px;
     padding-bottom: 10px;
     transform: translate(-50%, -50%);
-    color: rgb(139, 137, 137);
 }
 
 #time {
@@ -48,35 +68,47 @@ p {
 }
 
 .calculator {
-    color: rgb(139, 137, 137);
+    position: relative;
+    left: 5%;
     font-size: 25px;
 }
 
 #calcInput {
     background-color: black;
-    color: rgb(139, 137, 137);
 }
 
 #submitButton {
     background-color: black;
-    color: rgb(139, 137, 137);
+    color: rgb(158, 155, 155);
 }
 
 #result {
     font-style: bold;
 }
 
-#movingPicture {
-    position: relative;
-    max-width: 10%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    left: 1300px;
-    top: 150px;
-}
-
 #AnakinPic {
     position: absolute;
-    max-width: 90%;
+    max-width: 10%;
     height: auto;
+    left: 100px;
+    top: 400px;
+    transition: left 1.5s, top 1.5s;
+    transform: translate(-50%, -50%);
+}
+
+.pageVideo {
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+    border: 2px solid rgb(158, 155, 155);
+    height: 271px;
+    width: 480px;
+    padding: 0px;
+    margin: 10px;
+}
+
+#demoVid {
+    max-width: 100%;
+    max-height: 100%;
 }

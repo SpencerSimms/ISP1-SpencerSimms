@@ -1,4 +1,23 @@
+function getBrowser() {
+    let userAgent = navigator.userAgent;
+    let browserName
+    if (userAgent.indexOf("Chrome") !== -1) {
+        browserName = "Google Chrome";
+      } else if (userAgent.indexOf("Firefox") !== -1) {
+        browserName = "Mozilla Firefox";
+      } else if (userAgent.indexOf("Edge") !== -1) {
+        browserName = "Microsoft Edge";
+      } else if (userAgent.indexOf("Safari") !== -1 && userAgent.indexOf("Chrome") === -1) {
+        browserName = "Apple Safari";
+      } else {
+        browserName = "Unknown";
+      }
 
+    document.getElementById("browser").innerHTML = "Browser: " + browserName;
+
+}
+
+document.addEventListener("DOMContentLoaded", getBrowser);
 
 function addZero(num, digit) {
     return String(num).padStart(digit, '0')
@@ -47,31 +66,15 @@ function factorialCalc() {
     }
 }
 
-/*function movePic() {
-    let clickX = event.clientX;
-    let clickY = event.clientY;
-    document.getElementById("movingPicture").style.left = clickX + "px";
-    document.getElementById("movingPicture").style.top = clickY + "px";
-    let ogX = int(document.getElementById("movingPicture").style.left - "px");
-    let ogY = int(document.getElementById("movingPicture").style.top - "px");
-    while ((document.getElementById("movingPicture").style.left != (clickX + "px")) && (document.getElementById("movingPicture").style.top != (clickY + "px"))) {
-        document.getElementById("movingPicture").style.left += ((clickX - ogX) / 20) + "px";
-        document.getElementById("movingPicture").style.top += ((clickY - ogY) / 20) + "px";
-        setTimeout(movePic, 1000);
-    }
-}*/
-
 function movePic() {
-    const elem = document.getElementById("movingPicture");
     let clickX = event.clientX;
     let clickY = event.clientY;
-    let ogX = parseInt(elem.style.left);
-    let ogY = parseInt(elem.style.top);
-    while ((parseInt(elem.style.left) != clickX) && (parseInt(elem.style.top) != (clickY))) {
-        document.getElementById("movingPicture").style.left = (ogX + ((clickX - ogX) / 20)) + "px";
-        document.getElementById("movingPicture").style.top = (ogY + ((clickY - ogY) / 20)) + "px";
-        setTimeout(movePic, 1000);
-    }
+    document.getElementById("AnakinPic").style.left = clickX + "px";
+    document.getElementById("AnakinPic").style.top = clickY + "px";
 }
 
 document.addEventListener("click", movePic);
+
+function changeTheme() {
+    document.body.classList.toggle("lightMode");
+}

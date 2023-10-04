@@ -6,10 +6,15 @@
     </head>
     <body>
         
+        <div class="themeDiv">
+            <button id="ThemeButton" onclick=changeTheme()>Change Theme</button>
+        </div>
+
         <div class="info">
             <h1>Spencer Simms</h1>
-        
-            <p>Time Completed: </p>
+            <p id="browser"></p>
+            <p>Additional Item: Theme Button</p>
+            <p>Date and Time Completed: 10:28 PM 10/2/2023</p>
         </div>
 
         <div class="clock">
@@ -26,12 +31,15 @@
             <label for="calcInput">Factorial Calculator:</label>
             <button id="submitButton" onclick=factorialCalc()>Enter a positive number.</button>
             <p id="result"></p>
-
         </div>
 
-        <div id="movingPicture">
-            <img id="AnakinPic" src="AnakinPic.webp">
+        <div class="pageVideo">
+            <video id="demoVid" controls>
+                <source src="ISP1video.mp4" type="video/mp4">Video failed to load.
+            </video>
         </div>
+
+        <img id="AnakinPic" src="AnakinPic.webp" alt="Anakin Skywalker Picture">
 
     </body>
 </html>
