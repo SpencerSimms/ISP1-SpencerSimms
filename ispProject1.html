@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Links the css stylesheet and the javascript file that contains all of the functions -->
         <link rel="styleSheet" href="styleSheet.css">
         <script type="text/javascript" src="isp1Scripts.js"></script>
     </head>
     <body>
-        
+        <!-- button that calls the function changeTheme in order to toggle between dark and light mode themes -->
         <div class="themeDiv">
             <button id="ThemeButton" onclick=changeTheme()>Change Theme</button>
         </div>
 
+        <!-- contains my name, information about the browser that the page is opened on, additional items, and time completed -->
         <div class="info">
             <h1>Spencer Simms</h1>
             <p id="browser"></p>
@@ -17,6 +19,7 @@
             <p>Date and Time Completed: 10:28 PM 10/2/2023</p>
         </div>
 
+        <!-- displays current date and time in the top right corner-->
         <div class="clock">
             <p id="date"></p>
             <p id="time"></p>
@@ -24,21 +27,23 @@
             updateTime();
             setInterval(updateTime, 1000);  
             </script>
-            
         </div>
 
+        <!-- factorial calculator -->
         <div class="calculator">
             <label for="calcInput">Factorial Calculator:</label>
             <button id="submitButton" onclick=factorialCalc()>Enter a positive number.</button>
             <p id="result"></p>
         </div>
 
+        <!-- video demo of the page -->
         <div class="pageVideo">
             <video id="demoVid" controls>
                 <source src="ISP1video.mp4" type="video/mp4">Video failed to load.
             </video>
         </div>
 
+        <!-- Image that will move around the website whenever clicked -->
         <img id="AnakinPic" src="AnakinPic.webp" alt="Anakin Skywalker Picture">
 
     </body>
